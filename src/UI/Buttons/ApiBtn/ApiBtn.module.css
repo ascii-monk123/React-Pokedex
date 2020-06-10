@@ -1,0 +1,28 @@
+.ApiBtn {
+  position: absolute;
+  right: 20px;
+  top: 40px;
+  max-width: 300px;
+  padding: 10px 40px;
+  border-radius: 40px;
+  cursor: pointer;
+  height: 50px;
+  border: 1px solid limegreen;
+  font-size: 20px;
+  background-color: transparent;
+  color: limegreen;
+  transition: all 0.4s;
+  outline: none;
+}
+.ApiBtn:hover,
+.ApiBtn:active {
+  color: #fff;
+  background-color: limegreen;
+  border: 1px solid #000;
+}
+
+@media (max-width: 500px) {
+  .ApiBtn {
+    top: 20px;
+  }
+}

@@ -1,0 +1,41 @@
+header {
+  width: 100%;
+  height: 100vh;
+  background-image: url('../../img/45639.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.headerLogo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  background-color: transparent;
+  max-width: 400px;
+}
+.FooterText {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: #fff;
+  word-spacing: 3px;
+}
+.FooterText span {
+  color: red;
+}
+@media (max-width: 500px) {
+  .headerLogo {
+    top: 0;
+    left: 0;
+  }
+  #header-logo {
+    background-image: url('../../img//PokedexSmall.png') !important;
+  }
+  .FooterText {
+    width: 100%;
+    text-align: center;
+  }
+}
