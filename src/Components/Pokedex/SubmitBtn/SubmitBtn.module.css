@@ -1,0 +1,26 @@
+.SubmitBtn {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto 30px auto;
+  cursor: pointer;
+  border-radius: 500px;
+  border: 1px solid lime;
+  color: #fff;
+  background: linear-gradient(to right bottom, lime 0%, lightgreen 100%);
+  font-size: 20px;
+  transition: all 0.5s;
+  z-index: 100;
+  outline: none;
+}
+.SubmitBtn:hover {
+  background: linear-gradient(to left bottom, lightgreen 0%, lime 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.SubmitBtn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}

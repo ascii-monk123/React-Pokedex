@@ -35,7 +35,7 @@ class Header extends Component {
           <img src={ele} id="#header-logo" />
         </div>
         <ApiBtn name={'API'} />
-        <ReachSearch label={'Go to Pokedex'} />
+        <ReachSearch label={'Scroll Below'} />
         <div className={Classes.FooterText}>
           <p>
             Made with <span>❤</span> by Aahan Singh{' '}
