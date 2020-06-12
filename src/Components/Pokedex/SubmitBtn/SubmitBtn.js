@@ -3,7 +3,7 @@ import Classes from './SubmitBtn.module.css';
 
 const SubmiBtn = (props) => {
   return (
-    <button className={Classes.SubmitBtn}>
+    <button className={Classes.SubmitBtn} onClick={props.clicked}>
       <i className={'fa fa-search'} />
     </button>
   );

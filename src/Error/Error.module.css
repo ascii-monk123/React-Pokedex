@@ -1,0 +1,16 @@
+.Error {
+  width: 90%;
+  margin: 20px auto;
+  background-color: #ee5253;
+  color: #fff;
+  font-size: 19px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 7px 5px 7px 5px;
+}
+
+@media (max-width: 500px) {
+  .Error {
+    font-size: 13px;
+  }
+}
