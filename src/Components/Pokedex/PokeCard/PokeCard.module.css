@@ -1,0 +1,32 @@
+.PokeCard {
+  max-width: 1000px;
+  margin: 20px auto 20px auto;
+}
+.heading {
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  border-bottom: 1px solid lightgrey;
+}
+.grid {
+  margin-top: 70px !important;
+}
+.img {
+  width: 100%;
+  height: 450px;
+}
+.listdata {
+  font-size: 20px !important;
+}
+
+@media (max-width: 500px) {
+  .Pokecard {
+    width: 90% !important;
+  }
+  .heading {
+    font-size: 25px !important;
+  }
+  .img {
+    height: 300px;
+  }
+}

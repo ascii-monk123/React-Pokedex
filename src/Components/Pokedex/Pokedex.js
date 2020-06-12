@@ -5,6 +5,7 @@ import Input from './Input/Input';
 import SubmitBtn from './SubmitBtn/SubmitBtn';
 import axios from 'axios';
 import Error from '../../Error/Error';
+import PokeCard from './PokeCard/PokeCard';
 
 class Pokedex extends Component {
   constructor(props) {
@@ -60,6 +61,7 @@ class Pokedex extends Component {
 
   render() {
     let errMsg = null;
+    let pokeCard = null;
     if (this.state.isError) {
       errMsg = (
         <Error>
@@ -67,6 +69,9 @@ class Pokedex extends Component {
           name or server error!!!!!
         </Error>
       );
+    }
+    if (this.state.pokemon !== null) {
+      pokeCard = <PokeCard data={this.state.pokemon} />;
     }
     return (
       <Aux>
@@ -76,6 +81,7 @@ class Pokedex extends Component {
           <SubmitBtn
             clicked={(e) => this.getPokemonDetailsHandler(this.state.input)}
           />
+          {pokeCard}
           {errMsg}
         </section>
       </Aux>
