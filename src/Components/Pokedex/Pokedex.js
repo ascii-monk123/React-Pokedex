@@ -6,6 +6,7 @@ import SubmitBtn from './SubmitBtn/SubmitBtn';
 import axios from 'axios';
 import Error from '../../Error/Error';
 import PokeCard from './PokeCard/PokeCard';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 class Pokedex extends Component {
   constructor(props) {
@@ -14,6 +15,7 @@ class Pokedex extends Component {
       input: null,
       pokemon: null,
       isError: false,
+      showSpinner: false,
     };
   }
 
@@ -23,10 +25,13 @@ class Pokedex extends Component {
     }
     this.setState({
       input: valueText,
-      isError: false,
     });
   };
   getPokemonDetailsHandler = (query) => {
+    this.setState({
+      showSpinner: true,
+      error: false,
+    });
     axios
       .get('https://pokeapi.co/api/v2/pokemon/' + query)
       .then((response) => {
@@ -47,6 +52,7 @@ class Pokedex extends Component {
         this.setState({
           pokemon: { ...data },
           isError: false,
+          showSpinner: false,
         });
       })
       .catch((err) => {
@@ -62,12 +68,20 @@ class Pokedex extends Component {
   render() {
     let errMsg = null;
     let pokeCard = null;
+    let spinner = null;
     if (this.state.isError) {
       errMsg = (
         <Error>
           🎃🎃 Sorry unable to complete request at the moment. Invalid pokemon
           name or server error!!!!!
         </Error>
+      );
+    }
+    if (this.state.showSpinner && !this.state.isError) {
+      spinner = (
+        <div style={{ textAlign: 'center' }}>
+          <CircularProgress size={100} />
+        </div>
       );
     }
     if (this.state.pokemon !== null) {
@@ -79,8 +93,11 @@ class Pokedex extends Component {
           <h1 className={Classes.Title}>Search for a pokemon</h1>
           <Input changed={(e) => this.inputChangedHandler(e.target.value)} />
           <SubmitBtn
-            clicked={(e) => this.getPokemonDetailsHandler(this.state.input)}
+            clicked={(e) =>
+              this.getPokemonDetailsHandler(this.state.input.toLowerCase())
+            }
           />
+          {spinner}
           {pokeCard}
           {errMsg}
         </section>

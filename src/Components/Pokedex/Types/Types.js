@@ -23,6 +23,7 @@ const Type = (props) => {
     electric: '#fae078',
     normal: '#c6c6a7',
     rock: '#d1c17d',
+    psychic: '#F8BFEC',
   };
   return (
     <Chip
