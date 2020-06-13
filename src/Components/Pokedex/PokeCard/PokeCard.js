@@ -82,11 +82,15 @@ const PokeCard = (props) => {
                 </ListItem>
                 <Divider />
                 <ListItem button>
-                  <ListItemText>Height : {props.data.height} ft</ListItemText>
+                  <ListItemText>
+                    Height : {props.data.height / 10} metres
+                  </ListItemText>
                 </ListItem>
                 <Divider />
                 <ListItem button>
-                  <ListItemText>Weight : {props.data.weight} lbs</ListItemText>
+                  <ListItemText>
+                    Weight : {props.data.weight / 10} kgs
+                  </ListItemText>
                 </ListItem>
                 <Divider />
                 {stats}
