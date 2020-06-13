@@ -34,7 +34,7 @@ class Header extends Component {
         <div className={Classes.headerLogo}>
           <img src={ele} id="#header-logo" />
         </div>
-        <ApiBtn name={'API'} />
+        <ApiBtn name={'API'} destination={'https://pokeapi.co/'} />
         <ReachSearch label={'Scroll Below'} />
         <div className={Classes.FooterText}>
           <p>

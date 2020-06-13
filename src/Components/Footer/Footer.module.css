@@ -1,0 +1,44 @@
+.Footer {
+  height: 150px;
+  background-color: rgba(0, 0, 0, 0.9);
+  margin-top: 100px;
+  color: limegreen;
+  padding-top: 30px;
+}
+
+.listCustom {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.socialLinks:link,
+.socialLinks:visited {
+  text-decoration: none;
+  font-size: 30px;
+  transition: all 0.5s;
+  cursor: pointer;
+  color: limegreen;
+}
+.socialLinks:hover,
+.socialLinks:active {
+  color: #fff;
+}
+.copyrightText {
+  text-align: center;
+  font-size: 15px;
+  margin-top: 40px;
+}
+.copyrightText a {
+  margin-left: 5px;
+  color: #fff;
+}
+
+@media (max-width: 400px) {
+  .copyrightText {
+    font-size: 10px;
+  }
+  .Footer {
+    margin-top: 60px;
+  }
+}

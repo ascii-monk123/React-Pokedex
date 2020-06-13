@@ -22,12 +22,21 @@ class Pokedex extends Component {
   inputChangedHandler = (valueText) => {
     if (valueText === '') {
       valueText = null;
+      this.setState({
+        input: valueText,
+        isError: false,
+        showSpinner: false,
+      });
+      return;
     }
     this.setState({
       input: valueText,
     });
   };
   getPokemonDetailsHandler = (query) => {
+    if (query !== '' && query !== null) {
+      query = query.toLowerCase();
+    }
     this.setState({
       showSpinner: true,
       error: false,
@@ -93,9 +102,7 @@ class Pokedex extends Component {
           <h1 className={Classes.Title}>Search for a pokemon</h1>
           <Input changed={(e) => this.inputChangedHandler(e.target.value)} />
           <SubmitBtn
-            clicked={(e) =>
-              this.getPokemonDetailsHandler(this.state.input.toLowerCase())
-            }
+            clicked={(e) => this.getPokemonDetailsHandler(this.state.input)}
           />
           {spinner}
           {pokeCard}
