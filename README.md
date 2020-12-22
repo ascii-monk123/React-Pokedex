@@ -76,4 +76,4 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 ![Screenshot (9)](https://user-images.githubusercontent.com/43731514/84535682-e5352e00-ad09-11ea-8815-f037f15baee0.png)
 
 
-All right reserved . Anybody found trying to use the github code without my consent will be sent copyright strike right away. Please respect the dedication and hardwork made by me to develop this app.
+
